@@ -1,0 +1,32 @@
+### Create a new user
+POST http://localhost:5000/api/v1/users
+content-type: application/json
+
+{
+  "name": "Milos",
+  "lastName": "Velickovic",
+  "gender":"2",
+  "meta":{
+    "hair":{
+      "color":"black"
+    }
+  }
+}
+
+### Find a particular user with a given ID
+GET http://localhost:5000/api/v1/users/a61206fa-082d-4a89-af5c-6d4004f05455
+
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=asdf@asdf.com
+
+### Delete a user given id
+DELETE http://localhost:3000/auth/1
+
+### Update a user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+  "password": "aaaaa"
+}
